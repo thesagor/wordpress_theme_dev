@@ -32,7 +32,7 @@
                         <div class="middle_skill_get_in_cell">
                             <div class="hero-progress">
                                 <div class="progress-item">
-                                    <p>Development<span class="pull-right">90%</span></p>
+                                    <p>Development<span class="pull-right">95%</span></p>
                                     <div class="progress-main"><span class="progress-bar"  data-value="86%"></span></div>
                                 </div><!-- progress-item  -->
 
