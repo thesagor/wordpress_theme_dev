@@ -6,10 +6,12 @@ function myvcshort($atts,$content=null){
             'themex_title'=>'',
             'themex_images'=> '',
             'themex_title_color'=>'',
-            'themex_desc' => ''
-
-
-
+            'themex_desc' => '',
+            'themex_group' => array(
+                'group_title'=>'',
+                'group_amount'=>'',
+                'group_amount_color'=>''
+            )
         ),$atts)
     );
 
@@ -32,30 +34,24 @@ function myvcshort($atts,$content=null){
                     <div class="middle_skill_get_in heroo_get_in_tuch">
                         <div class="middle_skill_get_in_cell">
                             <div class="hero-progress">
-                                <div class="progress-item">
-                                    <p>Development<span class="pull-right">90%</span></p>
-                                    <div class="progress-main"><span class="progress-bar"  data-value="86%"></span></div>
-                                </div><!-- progress-item  -->
+                            <?php $themexGroup = vc_param_group_parse_atts( $atts['themex_group'] );
+                                if($themexGroup){
+                                    foreach ($themexGroup as $key => $value) { ?>
+                                        <div class="progress-item">
+                                            <p><?php echo esc_html($value['group_title']);?><span class="pull-right"><?php echo esc_html($value['group_amount']);?></span></p>
+                                            <div class="progress-main"><span class="progress-bar" style="background-color:<?php echo esc_html($value['group_amount_color']);?>"  data-value="<?php echo esc_html($value['group_amount']);?>%" ></span></div>
+                                        </div><!-- progress-item  -->
+                                        
+                                   <?php }
+                                }                            
+                            
+                            ?>
 
-                                <div class="progress-item">
-                                    <p>Web Marketing<span class="pull-right">96%</span></p>
-                                    <div class="progress-main"><span class="progress-bar"  data-value="90%"></span></div>
-                                </div><!-- progress-item  -->
 
-                                <div class="progress-item">
-                                    <p>Illustration<span class="pull-right">65%</span></p>
-                                    <div class="progress-main"><span class="progress-bar"  data-value="65%"></span></div>
-                                </div><!-- progress-item  -->
+                                
 
-                                <div class="progress-item">
-                                    <p>Phothgraphy<span class="pull-right">86%</span></p>
-                                    <div class="progress-main"><span class="progress-bar"  data-value="88%"></span></div>
-                                </div><!-- progress-item  -->
 
-                                <div class="progress-item">
-                                    <p>Identity<span class="pull-right">96%</span></p>
-                                    <div class="progress-main"><span class="progress-bar"  data-value="79%"></span></div>
-                                </div><!-- progress-item  -->
+                                
                             </div>
                         </div><!-- middle_skill_get_in_cell -->
                     </div><!-- middle_skill_get_in -->

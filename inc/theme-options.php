@@ -36,6 +36,28 @@
                         "param_name" => "themex_desc",
                         "value" => __( "This is default value for images", "themex" ),
                         "description" => __( "This is title zone.", "themex" )
+                    ),
+                    array(                    
+                        "type" => "param_group",
+                        "heading" => __( "Prgress Bar", "themex" ),
+                        "param_name" => "themex_group",
+                        "params"=>array(
+                            array(
+                                "type" => "textfield",
+                                "heading" => __( "Title", "themex" ),
+                                "param_name" => "group_title"
+                            ),
+                            array(
+                                "type" => "textfield",
+                                "heading" => __( "Progress Amount", "themex" ),
+                                "param_name" => "group_amount"
+                            ),
+                            array(
+                                "type" => "colorpicker",
+                                "heading" => __( "Progress Amount color", "themex" ),
+                                "param_name" => "group_amount_color"
+                            )
+                        )
                     )
 
                 )
