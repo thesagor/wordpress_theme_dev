@@ -4,7 +4,9 @@ function myvcshort($atts,$content=null){
     extract(shortcode_atts(
         array(
             'themex_title'=>'',
-            'themex_images'=> ''
+            'themex_images'=> '',
+            'themex_title_color'=>'',
+            'themex_desc' => ''
 
 
 
@@ -62,9 +64,8 @@ function myvcshort($atts,$content=null){
                 <div class="col-md-3 padding_right col-sm-6">
                     <div class="right_skill_get_in_text">
                         <div class="right_skill_get_in_text_cell">
-                            <h3><?php echo esc_html($themex_title);?></h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has.</p>
+                            <h3 style="color:<?php echo esc_attr($themex_title_color);?>"> <?php echo esc_html($themex_title);?></h3>
+                            <p><?php echo esc_html($themex_desc);?></p>
                             <a href="#" class="MESSAGE_uS">MESSAGE US</a>
                         </div>
                     </div>

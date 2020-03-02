@@ -11,16 +11,30 @@
                 array(
                     array(                    
                         "type" => "textfield",
-                        "heading" => __( "Please add Title", "themex" ),
+                        "heading" => __( "Please add 3rd section Title", "themex" ),
                         "param_name" => "themex_title",
                         "value" => __( "This is test param for creating new project", "themex" ),
                         "description" => __( "This is title zone.", "themex" )
                     ),
                     array(                    
-                        "type" => "attach_image",
-                        "heading" => __( "Please Images", "themex" ),
-                        "param_name" => "themex_images",
+                        "type" => "colorpicker",
+                        "heading" => __( "Please add color for Title", "themex" ),
+                        "param_name" => "themex_title_color",
                         "value" => __( "This is test param for creating new project", "themex" ),
+                        "description" => __( "This is title zone.", "themex" )
+                    ),
+                    array(                    
+                        "type" => "attach_image",
+                        "heading" => __( "Please Add Images For First section", "themex" ),
+                        "param_name" => "themex_images",
+                        "value" => __( "This is default value for images", "themex" ),
+                        "description" => __( "This is title zone.", "themex" )
+                    ),
+                    array(                    
+                        "type" => "textarea",
+                        "heading" => __( "Please Add Text box For 3rd section", "themex" ),
+                        "param_name" => "themex_desc",
+                        "value" => __( "This is default value for images", "themex" ),
                         "description" => __( "This is title zone.", "themex" )
                     )
 
