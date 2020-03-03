@@ -53,13 +53,49 @@
                             'param_name' => 'progress_amount_color',
                         )
                     )
-                )
-
-                
-                
+                )   
             )
 
             ));
+        vc_map(array(
+            'base'=>'serviceSec',
+            'name'=>'Themex Service',
+            'category'=>'ThemeX',
+            'icon'=>get_template_directory_uri( )."/images/logo-x.png",
+            'params'=>array(
+                array(
+                    'type'=>'param_group',
+                    'heading'=>'Service Sec',
+                    'param_name'=>'services_group',
+                    'params'=>array(
+                        array(
+                            'type'=>'iconpicker',
+                            'heading'=>'Select the icon',
+                            'param_name'=>'service_icon',
+                            'settings' => array(
+                                'emptyIcon'=>true,
+                                'type'=>'flaticon',
+                                'iconsPerPage'=>200
+                            )
+                        ),
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'Service Title',
+                            'param_name'=>'service_title'
+                        ),
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'Service Description',
+                            'param_name'=>'service_desc'
+                        )
+                        
+                        
+                    )
+
+                )
+            )
+
+        ));
 
     }
     add_action('vc_before_init','VCmapAddon');

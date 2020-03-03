@@ -69,6 +69,62 @@
 
     }
     add_shortcode('myVcShortcode','myShortcode');
+
+
+    function serviceSection($atts){
+        extract(shortcode_atts(
+            array(
+
+                'services_group'=>
+                 array(
+                    'service_icon'=> '',                    
+                    'service_title'=> '',
+                    'service_desc'=> ''
+
+                )
+
+        ),$atts));
+
+
+    ob_start();?>
+
+        <div class="service_section_digital">
+            <div class="container">
+                <div class="row">
+                    <div class="service_section_digital_list">
+                        <?php
+                            $vc_group_service = vc_param_group_parse_atts( $atts['services_group'] );
+                            foreach ($vc_group_service as $s_key => $s_value) { ?>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single_service_digitAl text-center">
+                                        <div class="c_column_digital_text">
+                                            <i class="fas fa-american-sign-language-interpreting"></i>
+                                            <h3><a href="#"><?php echo esc_html($s_value['service_title']);?></a></h3>
+                                            <p><?php echo esc_html($s_value[service_desc]);?></p>
+                                        </div>
+                                    </div>  
+                                </div><!-- col-md-3  -->
+
+                                
+                                
+                           <?php }
+                            ?>
+                                              
+
+
+                    </div><!-- service_section_digital_list  -->
+                </div><!-- row  -->
+            </div><!-- container  -->
+        </div><!-- service_section_digital  -->
+
+
+
+    <?php return ob_get_clean();
+
+
+}
+add_shortcode('serviceSec','serviceSection');
     
 
 

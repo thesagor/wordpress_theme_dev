@@ -48,6 +48,13 @@ if(file_exists(get_template_directory().'/inc/theme-options.php')){
 	
 }
 
+//FlatIcon
+if(file_exists(get_template_directory().'/inc/flaticon.php')){
+	
+	require_once(get_template_directory().'/inc/flaticon.php');
+	
+}
+
 //Style Category
 
 add_filter('wp_list_categories', 'cat_count_span');
