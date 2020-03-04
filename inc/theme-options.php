@@ -209,6 +209,51 @@
 
         ));
 
+        vc_map(array(
+            'base'=>'testimonial_sec',
+            'name'=>'Themex Testimonial',
+            'category'=>'ThemeX',
+            'icon'=>get_template_directory_uri( )."/images/logo-x.png",
+            'params'=>array(
+                array(
+                    'type'=>'textfield',
+                    'heading'=>'Heading Text',
+                    'param_name'=>'heading_text'
+                ),
+                array(
+                    'type'=>'param_group',
+                    'heading'=>'working Sec',
+                    'param_name'=>'testimonial_group',
+                    'params'=>array(
+                        array(
+                            'type'=>'textarea',
+                            'heading'=>'Type the Testimonial Heading',
+                            'param_name'=>'testimonial_heading'
+                        ),
+                        array(
+                            'type'=>'attach_image',
+                            'heading'=>'Select the Image',
+                            'param_name'=>'testimonial_image'
+                        ),                        
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'Your Name',
+                            'param_name'=>'clients_name'
+                        ),
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'Testimonial Company',
+                            'param_name'=>'clients_company'
+                        )
+                        
+                        
+                    )
+
+                )
+            )
+
+        ));
+
     }
     add_action('vc_before_init','VCmapAddon');
 ?>

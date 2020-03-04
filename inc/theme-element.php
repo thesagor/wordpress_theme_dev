@@ -261,4 +261,71 @@ ob_start();?>
 }
 add_shortcode('pricing_sec_shortcode','pricing_sec');
 
+function testimonial_sec($atts){
+    extract(shortcode_atts(
+        array(
+            'heading_text'=>'',
+            'testimonial_group'=>
+                array(
+                    'testimonial_heading'=> '',
+                    'testimonial_image'=>'',
+                    'clients_name'=> '',
+                    'clients_company'=> ''
+
+                )
+
+    ),$atts));
+
+
+ob_start();?>
+
+    <div class="testimomnial_section_start_up">
+        <div class="container">
+            <div class="section_title_digitaL text-center">
+                <h3><?php echo esc_html($heading_text);?></h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial_digital owl-carousel">
+
+                    <?php $vc_group_testimonial = vc_param_group_parse_atts( $atts['testimonial_group'] );
+                    if($vc_group_testimonial){
+                        foreach ($vc_group_testimonial as $t_key => $T_value) { ?>
+
+                        <div class="item">
+                            <div class="sinfle_item_t_s_up text-center">
+                                <p class="testimonial_start_up_details"><?php echo esc_html($T_value['testimonial_heading'])?></p>
+                                <div class="pic_s_up">
+                                    <?php
+                                        $testi_image = wp_get_attachment_image_src( $T_value['testimonial_image'],'full ' );
+                                        if ( $testi_image ) : ?>
+                                            <img src="<?php echo $testi_image[0]; ?>" />
+                                        <?php endif; ?>
+
+                                
+
+
+                                    <img src="images/home/digital_home_testimonial_01.png" alt="">
+                                </div>
+                                <h4 class="start_up_details_admin_tess"><?php echo esc_html($T_value['clients_name'])?> <?php echo '-'?> <a href="#"><?php echo esc_html($T_value['clients_company'])?></a></h4>
+                            </div>
+                        </div>
+                            
+                       <?php } } ?>
+
+
+                        
+
+
+                    </div>
+                </div>
+            </div><!--.row-->
+        </div><!--.container-->
+    </div><!--.testimomnial_section_start_up-->
+
+<?php
+    return ob_get_clean();
+}
+add_shortcode( 'testimonial_sec', 'testimonial_sec' );
+
 ?>
