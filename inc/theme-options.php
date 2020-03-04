@@ -57,6 +57,7 @@
             )
 
             ));
+
         vc_map(array(
             'base'=>'serviceSec',
             'name'=>'Themex Service',
@@ -89,6 +90,117 @@
                             'param_name'=>'service_desc'
                         )
                         
+                        
+                    )
+
+                )
+            )
+
+        ));
+
+        vc_map(array(
+            'base'=>'workingsec',
+            'name'=>'Themex working',
+            'category'=>'ThemeX',
+            'icon'=>get_template_directory_uri( )."/images/logo-x.png",
+            'params'=>array(
+                array(
+                    'type'=>'param_group',
+                    'heading'=>'working Sec',
+                    'param_name'=>'working_group',
+                    'params'=>array(
+                        array(
+                            'type'=>'iconpicker',
+                            'heading'=>'Select the icon',
+                            'param_name'=>'working_icon',
+                            'settings' => array(
+                                'emptyIcon'=>true,
+                                'type'=>'flaticon',
+                                'iconsPerPage'=>200
+                            )
+                        ),                        
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'working Amount',
+                            'param_name'=>'working_amount'
+                        ),
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'working Title',
+                            'param_name'=>'working_title'
+                        )
+                        
+                        
+                    )
+
+                )
+            )
+
+        ));
+
+        vc_map(array(
+            'base'=>'pricing_sec_shortcode',
+            'name'=>'Themex Pricing',
+            'category'=>'ThemeX',
+            'icon'=>get_template_directory_uri( )."/images/logo-x.png",
+            'params'=>array(
+                array(
+                    'type'=>'param_group',
+                    'heading'=>'Pricing Sec',
+                    'param_name'=>'pricing_group',
+                    'params'=>array(
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'pricing Title',
+                            'param_name'=>'pricing_title'
+                        ),
+                        array(
+                            'type'=>'param_group',
+                            'heading'=>'Pricing package',
+                            'param_name'=>'pricing_package_group',
+                            'params'=>array(
+                                array(
+                                    'type'=>'iconpicker',
+                                    'heading'=>'Select the icon',
+                                    'param_name'=>'package_icon',
+                                    'settings' => array(
+                                        'emptyIcon'=>true,
+                                        'type'=>'flaticon',
+                                        'iconsPerPage'=>200
+                                    )
+                                ),
+                                array(
+                                    'type'=>'textfield',
+                                    'heading'=>'package amount',
+                                    'param_name'=>'package_amount'
+
+                                ),
+                                array(
+                                    'type'=>'textfield',
+                                    'heading'=>'package Date',
+                                    'param_name'=>'package_date'
+
+                                )
+
+                            )
+                        ),
+                        array(
+                            'type'=>'param_group',
+                            'heading'=>'pricing body',
+                            'param_name'=>'package_body_list',
+                            'params'=>array(
+                                array(
+                                    'type'=>'textfield',
+                                    'heading'=>'pricing list',
+                                    'param_name'=>'package_pricing_list'
+                                )
+                            )
+                        ),                        
+                        array(
+                            'type'=>'textfield',
+                            'heading'=>'pricing Button Text',
+                            'param_name'=>'pricing_btn_text'
+                        )
                         
                     )
 

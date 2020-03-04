@@ -4,7 +4,18 @@
             array( 'flaticon-monitor' => 'Monitor' ),
             array( 'flaticon-coding' => 'flaticon coding' ),
             array( 'flaticon-contract' => 'flaticon contract' ),
-            array( 'flaticon-lightbulb' => 'flaticon Lightbulb' )
+            array( 'flaticon-lightbulb' => 'flaticon Lightbulb' ),
+            array( 'flaticon-clinic-history' => 'flaticon clinic-history' ),
+            array( 'flaticon-laptop-outline' => 'flaticon laptop-outline' ),
+            array( 'flaticon-colored-pencils' => 'flaticon colored-pencils' ),
+            array( 'flaticon-gift' => 'flaticon-gift' ),
+            array( 'flaticon-smartphone' => 'flaticon smartphone' ),
+            array( 'flaticon-customer' => 'flaticon customer' ),
+            array( 'flaticon-tool' => 'flaticon tool' ),
+            array( 'flaticon-search' => 'flaticon search' ),
+            array( 'flaticon-settings' => 'flaticon settings' ),
+            array( 'flaticon-dollars' => 'flaticon Dollar' ),
+            array( 'flaticon-contact' => 'flaticon contact' )
 
         );
 
